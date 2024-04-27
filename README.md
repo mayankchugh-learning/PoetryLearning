@@ -1,4 +1,4 @@
-
+https://python-poetry.org/docs/#installing-with-the-official-installer
 
 poetry --version
 
@@ -37,3 +37,13 @@ poetry lock
 poetry install
 
 poetry export > requirement.txt
+
+poetry install --no-root
+
+which python
+
+poetry shell
+
+source "$( poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate"
+
+alias activate_poetry="source \"\$(poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate\""
